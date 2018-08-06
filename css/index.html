@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="home">
+<head>
+<title>
+My First Angular App
+</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script>
+var app= angular.module("home",[]);
+app.controller("first",function($scope){
+console.log("Test");
+$scope.name="VIGNESH";
+
+$scope.alertme=function(){
+    alert("inside the function");
+}
+});
+
+app.controller("second",function($scope){
+console.log("test1");
+
+});
+</script>
+
+</head>
+<body>
+<div ng-controller="first">
+<input type="text" ng-model="name">
+<h1>   {{name}}</h1> 
+<button ng-click="alertme()">alert</button>
+
+</div>
+<div ng-controller="second">
+
+
+</div>
+</body>
+</html>
